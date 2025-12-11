@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahfuz Ahmed Chowdhury | Amazon Brand Manager & Ecommerce Specialist</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --accent: #6366f1;
+      --accent-soft: rgba(99, 102, 241, 0.1);
+      --accent-strong: #22d3ee;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --card: #020617;
+      --border: #1f2937;
+      --radius-lg: 18px;
+      --radius-xl: 28px;
+      --shadow-soft: 0 24px 80px rgba(15, 23, 42, 0.95);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 60%),
+        radial-gradient(circle at top right, rgba(129, 140, 248, 0.12), transparent 55%),
+        #020617;
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      max-width: 1120px;
+      padding: 32px 16px 56px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    nav a {
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, #6366f1, #22d3ee);
+      transition: width 0.18s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.4fr) minmax(0, 3fr);
+      gap: 32px;
+      align-items: stretch;
+      margin-bottom: 40px;
+    }
+
+    .hero-main {
+      padding: 26px 24px 24px;
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at top left, rgba(79, 70, 229, 0.22), transparent 60%),
+        linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(148, 163, 184, 0.28);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+
+    h1 span {
+      background: linear-gradient(to right, #e5e7eb, #a5b4fc);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 40rem;
+      margin-bottom: 18px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.97);
+      border: 1px solid rgba(55, 65, 81, 0.95);
+    }
+
+    .chip-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #38bdf8;
+    }
+
+    .chip-label {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.7rem;
+      color: #6b7280;
+    }
+
+    .chip-strong {
+      font-size: 0.8rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.86rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease,
+        border-color 0.12s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #22d3ee);
+      border-color: rgba(129, 140, 248, 0.7);
+      color: white;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.95);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 24px 55px rgba(15, 23, 42, 1);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.92);
+      border-color: rgba(75, 85, 99, 0.95);
+      color: #e5e7eb;
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-1px);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .btn-icon {
+      font-size: 1.1rem;
+      transform: translateY(1px);
+    }
+
+    .hero-aside {
+      position: relative;
+    }
+
+    .profile-card {
+      border-radius: var(--radius-xl);
+      padding: 20px 18px 18px;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 1));
+      border: 1px solid rgba(31, 41, 55, 0.96);
+      box-shadow: var(--shadow-soft);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-glow {
+      position: absolute;
+      inset: -40%;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(59, 130, 246, 0.1), transparent 65%),
+        radial-gradient(circle at 90% 100%, rgba(45, 212, 191, 0.12), transparent 65%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .profile-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .avatar-wrap {
+      width: 160px;
+      height: 160px;
+      border-radius: 999px;
+      padding: 4px;
+      background: conic-gradient(from 210deg, #22d3ee, #6366f1, #22c55e, #22d3ee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 4px auto 10px;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 999px;
+      background-color: #020617;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("mahfuz-profile.jpeg");
+    }
+
+    .profile-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .profile-title {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .profile-tagline {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .profile-tag {
+      font-size: 0.72rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(55, 65, 81, 0.95);
+      color: #e5e7eb;
+    }
+
+    .profile-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: grid;
+      gap: 2px;
+      margin-bottom: 10px;
+    }
+
+    .profile-meta span strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .profile-links {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .profile-link-btn {
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(75, 85, 99, 0.95);
+      background: rgba(15, 23, 42, 0.96);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .profile-link-btn span.icon {
+      font-size: 0.88rem;
+      transform: translateY(1px);
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #6b7280;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.98);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 16px 16px 18px;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
+    }
+
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .card-pill {
+      font-size: 0.7rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(129, 140, 248, 0.6);
+      color: #c7d2fe;
+    }
+
+    .card-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .card-list {
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      font-size: 0.82rem;
+      color: #e5e7eb;
+    }
+
+    .card-list li::before {
+      content: "•";
+      color: #6366f1;
+      margin-right: 6px;
+    }
+
+    .brands-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .brand-tag {
+      font-size: 0.8rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at top left, rgba(79, 70, 229, 0.4), transparent 60%),
+        rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(129, 140, 248, 0.7);
+      color: #e5e7eb;
+    }
+
+    .brand-tag span {
+      font-size: 0.72rem;
+      color: #a5b4fc;
+      margin-left: 4px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.14), transparent 60%),
+        rgba(15, 23, 42, 0.98);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(55, 65, 81, 0.96);
+      padding: 14px 14px 16px;
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.96);
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .project-subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .project-list {
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .project-list li::before {
+      content: "•";
+      margin-right: 5px;
+      color: #22d3ee;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .product-card {
+      background:
+        radial-gradient(circle at top left, rgba(79, 70, 229, 0.3), transparent 60%),
+        rgba(15, 23, 42, 0.98);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(55, 65, 81, 0.96);
+      padding: 12px 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .product-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .product-market {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .product-role {
+      font-size: 0.78rem;
+      color: #e5e7eb;
+    }
+
+    .product-link {
+      margin-top: 6px;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.9);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .product-link span.icon {
+      font-size: 0.9rem;
+      transform: translateY(1px);
+    }
+
+    .contact-section {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 2.3fr) minmax(0, 2.2fr);
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 60%),
+        rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(55, 65, 81, 0.96);
+      padding: 16px 16px 18px;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.98);
+    }
+
+    .contact-card p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.86rem;
+      display: grid;
+      gap: 4px;
+    }
+
+    .contact-list span.label {
+      color: #6b7280;
+      margin-right: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      font-size: 0.72rem;
+    }
+
+    footer {
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(31, 41, 55, 0.96);
+      font-size: 0.76rem;
+      color: #6b7280;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #9ca3af;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact-section {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        justify-content: flex-start;
+      }
+
+      .page {
+        padding: 20px 14px 40px;
+      }
+
+      .hero-main {
+        padding: 18px 16px;
+      }
+
+      .grid-two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      nav {
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Case Studies</a>
+        <a href="#products">Product Links</a>
+        <a href="#education">Education</a>
+        <a href="#recommendations">Recommendations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="about">
+        <aside class="hero-aside">
+          <div class="profile-card">
+            <div class="profile-glow"></div>
+            <div class="profile-inner">
+              <div class="avatar-wrap">
+                <div class="avatar"></div>
+              </div>
+              <div class="profile-name">Mahfuz Ahmed Chowdhury</div>
+              <div class="profile-title">Amazon Brand Manager & E-commerce Specialist</div>
+              <div class="profile-tagline">Focused on business growth, account health and customer experience.</div>
+
+              <div class="profile-tags">
+                <span class="profile-tag">Listing Creation & Optimization</span>
+                <span class="profile-tag">Pricing & PPC</span>
+                <span class="profile-tag">SEO & FBA Inventory</span>
+              </div>
+
+              <div class="profile-meta">
+                <span><strong>Location:</strong> Scarborough, ON, Canada</span>
+                <span><strong>Phone:</strong> +1 (647) 247-8874</span>
+                <span><strong>Email:</strong> mahfuzchy07@gmail.com</span>
+                <span><strong>Tools:</strong> Helium 10 · Jungle Scout · AMZFinder · Semrush · Odoo ERP · Slack · Trello ·
+                  ClickUp</span>
+              </div>
+
+              <div class="profile-links">
+                <a class="profile-link-btn" href="mailto:mahfuzchy07@gmail.com">
+                  <span class="icon">✉️</span>
+                  <span>Email</span>
+                </a>
+                <a class="profile-link-btn" href="https://www.linkedin.com/in/mahfuz-ahmed-chowdhury/" target="_blank" rel="noopener noreferrer">
+                  <span class="icon">🔗</span>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <div class="hero-main">
+          <h1>
+            E-commerce specialist helping brands
+            <span>win on Amazon & beyond.</span>
+          </h1>
+          <p class="subtitle">
+            E-commerce Specialist with 5+ years of experience growing brands across Amazon, Shopify and other
+            marketplaces in Canada, the US, UK, France, Italy, Spain, Germany, Sweden and the Netherlands.
+            I combine data-driven strategy, strong account health management and customer-centric thinking to drive
+            revenue growth and long-term brand equity.
+          </p>
+          <div class="hero-meta">
+            <div class="chip">
+              <div class="chip-dot"></div>
+              <div>
+                <div class="chip-label">Experience</div>
+                <div class="chip-strong">5+ years multi-market e-commerce</div>
+              </div>
+            </div>
+            <div class="chip">
+              <div class="chip-dot" style="background:#a855f7"></div>
+              <div>
+                <div class="chip-label">Portfolio scale</div>
+                <div class="chip-strong">$25M+ revenue · multiple top-ranked SKUs</div>
+              </div>
+            </div>
+            <div class="chip">
+              <div class="chip-dot" style="background:#22c55e"></div>
+              <div>
+                <div class="chip-label">Advertising</div>
+                <div class="chip-strong">$30K+/mo PPC budgets</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a class="btn-primary" href="#products">
+              View live product listings
+              <span class="btn-icon">↗</span>
+            </a>
+            <a class="btn-ghost" href="#contact">
+              Contact me
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-header">
+          <h2 class="section-title">Experience</h2>
+          <p class="section-kicker">End-to-end ownership across listings, PPC, operations, account health & customer experience.</p>
+        </div>
+
+        <div class="grid-two">
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">E-commerce Specialist</h3>
+              <span class="card-pill">Soneil Electronics · Brampton · Jul 2023 – Present</span>
+            </div>
+            <p class="card-meta">EV chargers, battery solutions & consumer electronics · Amazon & Shopify</p>
+            <ul class="card-list">
+              <li>Key contributor to the success of EV charger products for Soneil Spark, Aimilar and Smart Battery Bar,
+                helping achieve Top 10 rankings in their Amazon subcategories.</li>
+              <li>Drove 10x increase in gross revenue through listing optimization, competitive pricing, targeted
+                campaigns and SEO.</li>
+              <li>Maintained and improved Amazon account health by resolving listing suppression, policy issues and
+                compliance risks.</li>
+              <li>Boosted customer trust and conversions by addressing low-review challenges and strategically
+                leveraging high-quality reviews.</li>
+              <li>Managed end-to-end inventory operations, coordinating with inventory teams to prevent stockouts and
+                ensure timely availability.</li>
+              <li>Used analytics to track sales performance, customer behaviour and trends, enabling agile,
+                data-informed decisions.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">Senior E-commerce Executive</h3>
+              <span class="card-pill">STYLETECK INNOVATIONS LTD · Dhaka · Jan 2021 – Dec 2022</span>
+            </div>
+            <p class="card-meta">Amazon EU brands: ADOV, ULTRICS, ROMIX</p>
+            <ul class="card-list">
+              <li>Managed products for European brands, helping multiple SKUs reach #1 in their Amazon UK
+                subcategories.</li>
+              <li>Selected and launched new products based on market trend analysis, driving ~1.5x revenue growth year
+                over year.</li>
+              <li>Introduced a COGS methodology that enabled the company to save around $100,000 annually.</li>
+              <li>Resolved complex issues such as listing blocks, image suppressions and Hazmat reviews in short
+                timelines.</li>
+              <li>Used Trello and Asana to manage projects, track milestones and coordinate with cross-functional teams.</li>
+              <li>Recognized multiple times for outstanding performance and operational contribution.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section">
+          <div class="section-header">
+            <h2 class="section-title">Experience & Skills</h2>
+            <p class="section-kicker">Broad e-commerce, technical and leadership capabilities.</p>
+          </div>
+          <div class="grid-two">
+            <article class="card">
+              <div class="card-title-row">
+                <h3 class="card-title">E-commerce Executive</h3>
+                <span class="card-pill">STYLETECK INNOVATIONS LTD · Feb 2020 – Dec 2020</span>
+              </div>
+              <p class="card-meta">Amazon EU portfolio management · ADOV, ULTRICS, ROMIX</p>
+              <ul class="card-list">
+                <li>Managed and optimized product listings across Amazon EU marketplaces to drive visibility & sales.</li>
+                <li>Oversaw pricing strategies and monitored performance to maintain competitiveness.</li>
+                <li>Updated keywords to enhance search visibility and organic traffic.</li>
+                <li>Managed inventory levels to reduce stockouts and maintain service levels.</li>
+                <li>Implemented deals and discounts to revive underperforming products.</li>
+                <li>Proactively took initiatives to attract new customers and enhance overall customer experience.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-title-row">
+                <h3 class="card-title">Technical & Soft Skills</h3>
+                <span class="card-pill">Day-to-day toolkit</span>
+              </div>
+              <p class="card-meta">Blending tools, analysis and team leadership.</p>
+              <ul class="card-list">
+                <li>Design: Proteus, Blender, Adobe Photoshop.</li>
+                <li>Applications: Microsoft Office, Slack, Trello, ClickUp, ADP, Timetastic.</li>
+                <li>Amazon & analytics: Helium 10, Jungle Scout, AMZFinder, Semrush.</li>
+                <li>Tech stack: Unity, Android Studio, NetBeans, CodeBlocks.</li>
+                <li>Experienced in leading teams, coaching & mentoring 10–30 people in e-commerce functions.</li>
+                <li>Strong in documentation, process improvement & managing complex, multicultural projects.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="section" aria-label="Brands">
+          <div class="section-header">
+            <h2 class="section-title">Brands Managed</h2>
+            <p class="section-kicker">Representative Brand portfolio.</p>
+          </div>
+          <div class="card">
+            <div class="brands-grid">
+              <span class="brand-tag">Soneil Spark <span>US · CA</span></span>
+              <span class="brand-tag">Aimilar <span>US · CA</span></span>
+              <span class="brand-tag">Smart Battery Bar <span>US · CA</span></span>
+              <span class="brand-tag">Soneil Electronics <span>US · CA</span></span>
+              <span class="brand-tag">ADOV <span>UK · EU </span></span>
+              <span class="brand-tag">ULTRICS <span>UK · EU </span></span>
+              <span class="brand-tag">ROMIX <span>UK · EU </span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-header">
+          <h2 class="section-title">Case Studies</h2>
+          <p class="section-kicker">How I approach growth, problem-solving and account stability.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3 class="project-title">Aimilar Level 2 EV Charger – Growth Turnaround</h3>
+            <p class="project-subtitle">US & Canada · EV charging</p>
+            <ul class="project-list">
+              <li>Identified low CTR (~0.3%), weak page ranking and incomplete keyword indexing as major blockers in a competitive EV charger market.</li>
+              <li>Completed a competitor analysis across pricing, features, creatives, reviews and keyword coverage to reposition the offer effectively.</li>
+              <li>Rebuilt the listing with enhanced, keyword-rich bullets, improved title, upgraded images and A+ content to strengthen CTR and relevancy.</li>
+              <li>Restructured PPC using discovery, scaling and profitability tiers supported by active keyword harvesting and negative targeting.</li>
+              <li><strong>Results:</strong> CTR 5%, CVR ~8% → ~13%, ACoS ~38% → ~21%, and organic ranking improved into the Top 10.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">Aimilar – Variation Strategy for Review Lift & Sales Growth</h3>
+            <p class="project-subtitle">US & Canada · EV accessories</p>
+            <ul class="project-list">
+              <li>New SKUs struggled with low review counts, limiting buyer trust and early conversion in a crowded accessories category.</li>
+              <li>Designed a parent–child variation strategy to pool review equity across related SKUs and built a complete variation flat file.</li>
+              <li>Resolved a catalog product-type mismatch by investigating the error and working with Seller Support to correct attributes.</li>
+              <li>Successfully re-uploaded the variation family after the fix, linking all four SKUs under a single, stronger listing.</li>
+              <li><strong>Results:</strong> Higher review volume boosted CTR and CVR, driving a significant increase in sales within the first month post-variation.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">Smart Battery Bar – Compliance & Reinstatement</h3>
+            <p class="project-subtitle">US & Canada · EV charging</p>
+            <ul class="project-list">
+              <li>Faced a compliance-related listing suppression for a high-volume SKU driven by safety-related customer complaints.</li>
+              <li>Analysed customer feedback and return reasons to identify root causes and align corrective actions with Amazon compliance standards.</li>
+              <li>Created a detailed Plan of Action covering corrective, preventive and long-term process improvements.</li>
+              <li>Coordinated with engineering and suppliers to compile and submit safety test reports and documentation requested by Amazon.</li>
+              <li><strong>Results:</strong> Listing fully reinstated; sessions and ranking recovered within 4 weeks, returning sales to pre-suppression levels.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">ULTRICS – EU Inventory Stabilization</h3>
+            <p class="project-subtitle">Amazon UK & EU · Multi-market operations</p>
+            <ul class="project-list">
+              <li>Identified recurrent stockouts as a key driver of ranking drops, Buy Box loss and inconsistent visibility across ULTRICS EU SKUs.</li>
+              <li>Analysed per-ASIN sales velocity and marketplace demand to build a predictive replenishment and safety-stock model.</li>
+              <li>Implemented a rolling 3-month inventory plan with staggered orders, marketplace allocation and lead-time safeguards.</li>
+              <li>Improved inbound timing, reduced stranded inventory and maintained healthier FBA coverage across UK, DE, FR, IT and ES.</li>
+              <li><strong>Results:</strong> Stockouts reduced 50–60%, portfolio revenue increased 25–30%, and rankings stabilized across key SKUs.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">ADOV – Mandolin Slicer Organic Bestseller Strategy</h3>
+            <p class="project-subtitle">Amazon UK · Home & Kitchen</p>
+            <ul class="project-list">
+              <li>Faced heavy category saturation with many copycat products offering similar features at competing price points.</li>
+              <li>Upgraded the listing with improved gallery images, refreshed copy, higher-density keywords and clearer benefit messaging.</li>
+              <li>Added a product demonstration video to highlight unique functions and differentiate the listing without relying on PPC.</li>
+              <li>Adopted a stable premium pricing strategy to strengthen algorithmic consistency while competitors frequently changed prices.</li>
+              <li><strong>Results:</strong> Achieved #1 Best Seller organically, maintained the highest price in the niche and generated strong profit margins.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3 class="project-title">ROMIX – Traffic & Ranking Recovery via Cross-Listing</h3>
+            <p class="project-subtitle">Amazon UK & EU · Fitness accessories</p>
+            <ul class="project-list">
+              <li>Multiple ROMIX SKUs suffered from low page visits and weak visibility, while high PPC costs made scaling ads unprofitable.</li>
+              <li>Updated listings and images but saw limited improvement due to strong competition and expensive keyword bids.</li>
+              <li>Introduced a cross-listing strategy by adding underperforming SKUs to comparison charts on top-selling ROMIX listings.</li>
+              <li>Leveraged existing demand from high-traffic SKUs to channel internal traffic and improve visibility for weaker products.</li>
+              <li><strong>Results:</strong> Sessions increased significantly, organic rankings improved, and sales recovered without increasing PPC spend.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="section-header">
+          <h2 class="section-title">Live Product Links</h2>
+          <p class="section-kicker">Sample of live Amazon listings I’ve helped manage and grow.</p>
+        </div>
+
+        <div class="card">
+          <div class="product-grid">
+            <article class="product-card">
+              <h3 class="product-name">Aimilar – EV Accessories</h3>
+              <p class="product-market">Amazon.com · Amazon.ca</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.com/dp/B0CG8D445Q" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon</span>
+              </a>
+            </article>
+
+            <article class="product-card">
+              <h3 class="product-name">Aimilar – EV Accessories</h3>
+              <p class="product-market">Amazon.com · Amazon.ca</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.com/dp/B0F4K6ZSYK" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon</span>
+              </a>
+            </article>
+
+            <article class="product-card">
+              <h3 class="product-name">Smart Battery Bar – EV Accessories</h3>
+              <p class="product-market">Amazon.com · Amazon.ca</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.com/dp/B0D47RY26Z" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon</span>
+              </a>
+            </article>
+
+            <article class="product-card">
+              <h3 class="product-name">Smart Battery Bar – EV Accessories</h3>
+              <p class="product-market">Amazon.com · Amazon.ca</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.com/dp/B0BNLPQG1K" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon</span>
+              </a>
+            </article>
+
+            <article class="product-card">
+              <h3 class="product-name">ULTRICS – Tech Accessories</h3>
+              <p class="product-market">Amazon.co.uk · Amazon.eu</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.co.uk/dp/B00TM0W8ZY" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon UK</span>
+              </a>
+            </article>
+
+            <article class="product-card">
+              <h3 class="product-name">ADOV – Home & Kitchen Accessories</h3>
+              <p class="product-market">Amazon.co.uk · Amazon.eu</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.co.uk/dp/B08DRKPKDD" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon UK</span>
+              </a>
+            </article>
+
+            <article class="product-card">
+              <h3 class="product-name">ADOV – Home & Kitchen Accessories</h3>
+              <p class="product-market">Amazon.co.uk · Amazon.eu</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.co.uk/dp/B07N1FZR48" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon UK</span>
+              </a>
+            </article>
+
+            <article class="product-card">
+              <h3 class="product-name">ROMIX – Fitness Accessories</h3>
+              <p class="product-market">Amazon.co.uk · Amazon.eu</p>
+              <p class="product-role">End to end account management.</p>
+              <a class="product-link" href="https://www.amazon.co.uk/dp/B08D74L9TZ" target="_blank" rel="noopener noreferrer">
+                <span class="icon">↗</span>
+                <span>View on Amazon UK</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-header">
+          <h2 class="section-title">Education & Training</h2>
+          <p class="section-kicker">Technical foundation plus business communication skills.</p>
+        </div>
+        <div class="grid-two">
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">B.Sc. in Computer Science & Engineering</h3>
+              <span class="card-pill">Leading University · Sylhet · 2016–2019</span>
+            </div>
+            <p class="card-meta">Assessed as equivalent to a Canadian Bachelor’s Degree (WES).</p>
+            <ul class="card-list">
+              <li>Built a strong technical foundation useful for analytics, tooling and problem-solving.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">Business Communications Training</h3>
+              <span class="card-pill">Toronto Metropolitan University · May – Jun 2023</span>
+            </div>
+            <p class="card-meta">Toronto, Ontario, Canada.</p>
+            <ul class="card-list">
+              <li>Formal training in professional communication, presentation and stakeholder alignment.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+        <!-- LINKEDIN RECOMMENDATIONS SECTION -->
+      <section class="section" id="recommendations">
+        <div class="section-header">
+          <h2 class="section-title">LinkedIn Recommendations</h2>
+          <p class="section-kicker">What colleagues and managers say about working with me.</p>
+        </div>
+
+        <div class="grid-two">
+          <!-- 1. Graham (now first / left) -->
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">Graham Borden</h3>
+              <span class="card-pill">Manager · Soneil Spark</span>
+            </div>
+            <p class="card-meta">
+              “I had the pleasure of working with Mahfuz on a daily basis, and I can confidently say he is one of the most
+              dependable and proactive employees I’ve had the chance to collaborate with. No matter the challenge, Mahfuz
+              was always responsive, thoughtful, and ready to contribute with a solution-oriented mindset. His attention to
+              detail and the consistent quality of his work set a high standard for everyone around him. Whether it was tight
+              deadlines or shifting priorities, Mahfuz handled everything with calm, clarity, and a strong sense of ownership.
+              I genuinely enjoyed working with him each day—his professionalism, positive attitude, and reliability made a
+              real impact on my team. Anyone would be lucky to have Mahfuz on their side.”
+            </p>
+          </article>
+
+          <!-- 2. Rachel -->
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">Rachel Setayesh</h3>
+              <span class="card-pill">Program Manager · Soneil Spark</span>
+            </div>
+            <p class="card-meta">
+              “I’ve really enjoyed working with Mahfuz at Soneil. He has a strong grasp of e-commerce and has made a big
+              impact on how we sell and present our EV chargers online. Whether it’s improving product pages, refining our
+              online strategy, or troubleshooting issues with platforms and tools, he always approaches challenges with a
+              calm, solutions-oriented mindset. He is detail-oriented, thoughtful, and always brings smart, practical ideas
+              to the table. A reliable teammate and a great asset to any digital team!”
+            </p>
+          </article>
+
+          <!-- 3. Ridoy -->
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">Sheikh Md. Yasinur Rahman Ridoy</h3>
+              <span class="card-pill">Brand Manager · Staffasia</span>
+            </div>
+            <p class="card-meta">
+              “I am delighted to recommend Mahfuz Ahmed Chowdhury as a remarkable professional and an absolute pleasure to
+              work with. He brings a unique blend of expertise, dedication, and positivity to every project. He consistently
+              impressed me with his ability to grasp complex concepts swiftly and find innovative solutions. He demonstrated
+              a keen attention to detail that greatly contributed to the quality of our work. What sets him apart is his
+              exceptional communication skills. In our collaborative efforts, Mahfuz proved to be an outstanding team player.
+              He readily shared insights, provided constructive feedback, and always brought a positive attitude that
+              motivated everyone around him. His enthusiasm and genuine passion for his work are truly contagious. He not only
+              possesses the skills and expertise necessary to excel but also the character and interpersonal finesse that make
+              him a pleasure to collaborate with.”
+            </p>
+          </article>
+
+          <!-- 4. Md. Azhar Uddin (new, last) -->
+          <article class="card">
+            <div class="card-title-row">
+              <h3 class="card-title">Md. Azhar Uddin</h3>
+              <span class="card-pill">E-commerce Specialist · Staff Asia</span>
+            </div>
+            <p class="card-meta">
+              “I had the pleasure of working closely with Mahfuz Ahmed Chowdhury on various projects, and he consistently
+              impressed me with his dedication, expertise, and collaborative spirit. He has a remarkable ability to tackle
+              complex challenges with a thoughtful and analytical approach. He consistently delivers high-quality results and
+              is not afraid to go the extra mile to ensure the success of a project. Beyond his technical skills, Mahfuz is a
+              pleasure to work with. He communicates effectively, works well in teams, and always brings a positive attitude
+              to the table. His contributions have undoubtedly made a significant impact on our projects and team dynamics.
+              I wholeheartedly recommend Mahfuz Chowdhury to anyone looking for a dedicated and talented professional who can
+              thrive in challenging environments. He would be a valuable asset to any team.”
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- END LINKEDIN RECOMMENDATIONS SECTION -->
+
+      <section class="contact-section section" id="contact">
+        <div class="contact-card">
+          <h2 class="section-title" style="margin-bottom:8px;">Contact</h2>
+          <p>
+            I am actively seeking fully remote roles as an Amazon Account Manager, Brand Manager or E-commerce Specialist
+            for North American and EU-focused brands and agencies. I value long-term partnerships and transparent,
+            data-driven collaboration.
+          </p>
+          <ul class="contact-list">
+            <li><span class="label">Phone</span>+1 (647) 247-8874</li>
+            <li><span class="label">Email</span><a href="mailto:mahfuzchy07@gmail.com">mahfuzchy07@gmail.com</a></li>
+            <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/mahfuz-ahmed-chowdhury/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mahfuz-ahmed-chowdhury/</a></li>
+            <li><span class="label">Location</span>Scarborough, Ontario, Canada</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="card-title">How I typically work with brands</h3>
+          <ul class="card-list">
+            <li>Audit catalog, listings, pricing, PPC and inventory to find quick wins and high-impact risks.</li>
+            <li>Build clear growth plans for new and existing SKUs across SEO, creatives, reviews and PPC structure.</li>
+            <li>Monitor KPIs (CVR, ACoS/TACoS, sessions, ranking, inventory health) and iterate based on performance.</li>
+            <li>Resolve issues fast from compliance and suppressions to catalogue conflicts and inventory gaps.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Mahfuz Ahmed Chowdhury. All rights reserved.</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
